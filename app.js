@@ -74,6 +74,6 @@ async function onPost (webhook, ctx) {
 	])
 }
 
-main()
+main(onPost)
 	.then(() => (console.log('Ready!'), process.send('ready')))
 	.catch(err => (console.error(err), process.exit(1)))

@@ -1,15 +1,18 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":disableDependencyDashboard"
   ],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "automerge": true,
+      "ignoreTests": true
     },
     {
       "matchDepTypes": ["devDependencies"],
-      "automerge": true
+      "automerge": true,
+      "ignoreTests": true
     }
   ]
 }

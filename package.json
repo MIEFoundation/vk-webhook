@@ -11,6 +11,6 @@
   "license": "UNLICENSED",
   "dependencies": {
     "discord.js": "14.3.0",
-    "vk-io": "4.6.0"
+    "vk-io": "4.7.0"
   }
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="icon" href="data:,">
+	<title>VK→Discord Webhook</title>
+	<meta name="description" content="Webhook service from VK to Discord.">
+	<style>
+		html,
+		body {
+			display: grid;
+			height: 99%;
+			font-family: sans-serif;
+			line-height: 1.4;
+			background: #4af
+		}
+		a {
+			color: #28f
+		}
+		div {
+			margin: auto;
+			background: #fff;
+			box-shadow: 4px 4px 8px 0px;
+			padding: 2em
+		}
+		input {
+			border: 1px #333 solid;
+			padding: .2em .5em;
+			border-radius: 3px
+		}
+		label {
+		    clear: left;
+		    width: 200px;
+		    text-align: right;
+		}
+		input, label {
+			float: left;
+			margin: .2em;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<h3>VK→Discord Webhook</h3>
+		<p>✅ Easy and free to use</p>
+		<p>⚠️ Only new post notifications implemented for now</p>
+		<form method="GET" action="link">
+			<label>VK group ID</label>
+			<input required name="id" type="number" placeholder="168965593" step="1">
+			<label>VK confirmation</label>
+			<input required name="confirm" placeholder="cbed84cd" pattern="[a-f0-9]{8}">
+			<label>Discord Webhook</label>
+			<input required name="url" type="url" placeholder="https://discord.com/api/webhooks/..." pattern="https://discord.com/api/webhooks/.*">
+			<label><a href="//github.com/MIEFoundation/vk-webhook">Source code on GitHub</a></label>
+			<input type="submit" value="Get server URL">
+		</form>
+	</div>
+</body>
+
+</html>

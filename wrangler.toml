@@ -1,0 +1,11 @@
+name = "vk-to-discord"
+main = "worker.js"
+account_id = "d4b66e7b506192cdf9d18523dc8b357b"
+compatibility_date = "2023-01-11"
+
+rules = [
+  { type = "Text", globs = ["**/*.html"], fallthrough = true }
+]
+
+[env]
+VKAPI_BASE_URL = 'https://vkapi.saiv46.workers.dev'

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="icon" href="data:,">
+	<title>VK→Discord Webhook</title>
+	<meta name="description" content="Webhook service from VK to Discord.">
+	<style>
+		html,
+		body {
+			display: grid;
+			height: 99%;
+			font-family: sans-serif;
+			line-height: 1.4;
+			background: #4af
+		}
+		div {
+			margin: auto;
+			background: #fff;
+			box-shadow: 4px 4px 8px 0px;
+			padding: 2em
+		}
+		input {
+			border: 1px #333 solid;
+			padding: .2em .5em;
+			border-radius: 3px
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<h3>Your VK→Discord Webhook is ready!</h3>
+		<p>Copy-paste this URL to Callback API:</p>
+		<input type="url" readonly value="{{url}}">
+	</div>
+</body>
+
+</html>

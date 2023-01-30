@@ -10,7 +10,7 @@ function OnGetRequest(request) {
   const url = new URL(request.url)
   switch (url.pathname) {
     case '/': return new Response(
-      IndexPageContent.replaceAll(/[\t\n]+|\s(?={)|(?<=:)\s/, ''),
+      IndexPageContent.replaceAll(/[\t\n]+|\s(?={)|(?<=:)\s/g, ''),
       {
         headers: {
           "Cache-Control": "public, max-age=604800",
@@ -19,13 +19,13 @@ function OnGetRequest(request) {
       }
     )
     case '/link': {
-      const url = url.origin + API_PREFIX
+      const path = url.origin + API_PREFIX
         + url.searchParams.get('id') + ':' + url.searchParams.get('confirm')
         + '/' + (url.searchParams.get('url') ?? '').slice('https://discord.com/api/webhooks/'.length)
       return new Response(
         LinkPageContent
-          .replaceAll(/[\t\n]+|\s(?={)|(?<=:)\s/, '')
-          .replace('{{url}}', url),
+          .replaceAll(/[\t\n]+|\s(?={)|(?<=:)\s/g, '')
+          .replace('{{url}}', path),
         {
           headers: {
             "Cache-Control": "private, no-cache",
